@@ -21,3 +21,4 @@ export const { setMode } = themeSlice.actions
 export default themeSlice.reducer
 
 export const selectMode = (state: RootState) => state.theme.mode
+export const selectUserId = (state: RootState) => state.theme.userId
