@@ -15,7 +15,7 @@ interface IProps {
 export default function Navbar({ user, isSidebarOpen, setIsSidebarOpen }: IProps) {
   const dispatch = useAppDispatch()
   const theme = useTheme()
-  console.log(theme)
+  // console.log(theme)
   const [anchorEl, setAnchorEl] = useState<Element | null>(null)
   
   const isOpen = Boolean(anchorEl)
