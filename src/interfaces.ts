@@ -7,3 +7,32 @@ export interface IToken {
 export interface IKeys { 
   [x:string]: string
 }
+
+export interface IProduct {
+  _id: string
+  name: string
+  description: string
+  price: number
+  rating: number
+  category: string
+  supply: number
+  stat: {
+    yearlySalesTotal: string
+    yearlyTotalSoldUnits: string
+  }
+}
+
+
+export interface IUser {
+  _id: string
+  name: string
+  email: string
+  password: string
+  city: string
+  state: string | null
+  country: string
+  occupation: string
+  phoneNumber: string
+  transactions: string[]
+  role: string
+}

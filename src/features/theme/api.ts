@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { IProduct, IUser } from '../../interfaces'
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
@@ -19,11 +20,11 @@ export const api = createApi({
       query: (id) => `general/user/${id}`,
       providesTags: ["User"],               //Determines which 'tag' is attached to the cached data returned by the query
     }),
-    getProducts: build.query({
+    getProducts: build.query<IProduct[], void>({
       query: () => "client/products",
       providesTags: ["Products"],
     }),
-    getCustomers: build.query({
+    getCustomers: build.query<IUser[], void>({
       query: () => "client/customers",
       providesTags: ["Customers"],
     }),

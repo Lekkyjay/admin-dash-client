@@ -17,6 +17,9 @@ declare module '@mui/material/styles' {
     800: string;
     900: string;
   }
+  interface Palette {
+    neutral: string
+  }
 }
 
 // color design tokens export
