@@ -17,7 +17,7 @@ export const api = createApi({
   ],
   endpoints: (build) => ({
     getUser: build.query({
-      query: (id) => `general/user/${id}`,
+      query: (id) => `general/user/${id}`,  //available as req.params in the backEnd
       providesTags: ["User"],               //Determines which 'tag' is attached to the cached data returned by the query
     }),
     getProducts: build.query<IProduct[], void>({
@@ -32,7 +32,7 @@ export const api = createApi({
       query: ({ page, pageSize, sort, search }) => ({
         url: "client/transactions",
         method: "GET",
-        params: { page, pageSize, sort, search },
+        params: { page, pageSize, sort, search },     //available as req.query in the backEnd
       }),
       providesTags: ["Transactions"],
     }),

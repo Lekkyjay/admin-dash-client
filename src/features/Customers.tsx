@@ -29,9 +29,9 @@ export default function Customers() {
       field: "phoneNumber",
       headerName: "Phone Number",
       flex: 0.5,
-      // renderCell: (params) => {
-      //   return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1)$2-$3")
-      // },
+      renderCell: (params: any) => {
+        return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, "($1)$2-$3")
+      },
     },
     {
       field: "country",
