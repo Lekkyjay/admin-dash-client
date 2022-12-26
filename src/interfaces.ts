@@ -41,3 +41,21 @@ export interface IGeo {
   id: string
   value: number
 }
+
+export interface ISales {
+  totalCustomers: number
+  yearlySalesTotal: number
+  yearlyTotalSoldUnits: number
+  year: number
+  monthlyData: {
+    month: string
+    totalSales: number
+    totalUnits: number
+    _id: string
+  }[],
+  dailyData: { 
+    date: string
+    totalSales: number
+    totalUnits: number
+  }
+}
