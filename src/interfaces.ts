@@ -36,3 +36,8 @@ export interface IUser {
   transactions: string[]
   role: string
 }
+
+export interface IGeo {
+  id: string
+  value: number
+}

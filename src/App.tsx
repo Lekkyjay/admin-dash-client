@@ -10,6 +10,7 @@ import Dashboard from './features/Dashboard'
 import Products from './features/Products'
 import Customers from './features/Customers'
 import Transactions from './features/Transactions'
+import Geography from './features/Geography'
 
 function App() {
   const mode = useAppSelector(selectMode) as PaletteMode
@@ -26,6 +27,7 @@ function App() {
             <Route path='/products' element={<Products />} />
             <Route path='/customers' element={<Customers />} />
             <Route path='/transactions' element={<Transactions />} />
+            <Route path='/geography' element={<Geography />} />
           </Route>
         </Routes>
       </ThemeProvider>

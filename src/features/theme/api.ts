@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { IProduct, IUser } from '../../interfaces'
+import { IGeo, IProduct, IUser } from '../../interfaces'
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
@@ -36,7 +36,7 @@ export const api = createApi({
       }),
       providesTags: ["Transactions"],
     }),
-    getGeography: build.query({
+    getGeography: build.query<IGeo[], void>({
       query: () => "client/geography",
       providesTags: ["Geography"],
     }),
