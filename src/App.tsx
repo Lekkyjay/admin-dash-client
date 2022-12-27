@@ -15,6 +15,8 @@ import Overview from './features/Overview'
 import Daily from './features/Daily'
 import Monthly from './features/Monthly'
 import Breakdown from './features/Breakdown'
+import Admin from './features/Admin'
+import Performance from './features/Performance'
 
 function App() {
   const mode = useAppSelector(selectMode) as PaletteMode
@@ -36,6 +38,8 @@ function App() {
             <Route path='/daily' element={<Daily />} />
             <Route path='/monthly' element={<Monthly />} />
             <Route path='/breakdown' element={<Breakdown />} />
+            <Route path='/admin' element={<Admin />} />
+            <Route path='/performance' element={<Performance />} />
           </Route>
         </Routes>
       </ThemeProvider>

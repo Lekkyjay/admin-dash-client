@@ -44,7 +44,7 @@ export const api = createApi({
       query: () => "sales/sales",
       providesTags: ["Sales"],
     }),
-    getAdmins: build.query({
+    getAdmins: build.query<IUser[], void>({
       query: () => "management/admins",
       providesTags: ["Admins"],
     }),
