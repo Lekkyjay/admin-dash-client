@@ -2,21 +2,11 @@ import { useTheme } from '@mui/material';
 import { useMemo } from 'react'
 import { ResponsiveLine } from '@nivo/line'
 import { useGetSalesQuery } from './theme/api';
-
-interface IData {
-  x: string
-  y: number
-}
+import { ITotalSales } from '../interfaces';
 
 interface IProps {
   view: string
   isDashboard?: boolean
-}
-
-interface ITotalSales {
-  id: string
-  color: string
-  data: IData[]
 }
 
 export default function OverviewChart({ isDashboard = false, view }: IProps) {

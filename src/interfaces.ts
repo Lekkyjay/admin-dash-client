@@ -57,5 +57,16 @@ export interface ISales {
     date: string
     totalSales: number
     totalUnits: number
-  }
+  }[]
+}
+
+export interface IData {
+  x: string
+  y: number
+}
+
+export interface ITotalSales {
+  id: string
+  color: string
+  data: IData[]
 }
