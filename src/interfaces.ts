@@ -57,7 +57,13 @@ export interface ISales {
     date: string
     totalSales: number
     totalUnits: number
-  }[]
+  }[],
+  salesByCategory: {
+    shoes: number
+    clothing: number
+    accessories: number
+    misc: number
+  },
 }
 
 export interface IData {

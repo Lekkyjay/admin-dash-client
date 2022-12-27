@@ -14,6 +14,7 @@ import Geography from './features/Geography'
 import Overview from './features/Overview'
 import Daily from './features/Daily'
 import Monthly from './features/Monthly'
+import Breakdown from './features/Breakdown'
 
 function App() {
   const mode = useAppSelector(selectMode) as PaletteMode
@@ -34,6 +35,7 @@ function App() {
             <Route path='/overview' element={<Overview />} />
             <Route path='/daily' element={<Daily />} />
             <Route path='/monthly' element={<Monthly />} />
+            <Route path='/breakdown' element={<Breakdown />} />
           </Route>
         </Routes>
       </ThemeProvider>
