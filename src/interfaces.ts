@@ -75,3 +75,14 @@ export interface ITotalSales {
   color: string
   data: IData[]
 }
+
+export interface IDashboardData {
+  totalCustomers: any
+  yearlyTotalSoldUnits: any
+  yearlySalesTotal: any
+  monthlyData: any
+  salesByCategory: any
+  thisMonthStats: any
+  todayStats: any
+  transactions: any
+}

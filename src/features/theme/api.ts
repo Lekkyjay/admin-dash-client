@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { IGeo, IProduct, ISales, IUser } from '../../interfaces'
+import { IDashboardData, IGeo, IProduct, ISales, IUser } from '../../interfaces'
 
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
@@ -52,7 +52,7 @@ export const api = createApi({
       query: (id) => `management/performance/${id}`,
       providesTags: ["Performance"],
     }),
-    getDashboard: build.query({
+    getDashboard: build.query<IDashboardData, void>({
       query: () => "general/dashboard",
       providesTags: ["Dashboard"],
     }),
