@@ -28,7 +28,7 @@ export default function Transactions() {
     search,
   });
 
-  console.log({data})
+  // console.log({data})
 
   const columns = [
     {

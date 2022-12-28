@@ -12,7 +12,7 @@ interface IProps {
 export default function OverviewChart({ isDashboard = false, view }: IProps) {
   const theme = useTheme();
   const { data, isLoading } = useGetSalesQuery();
-  console.log({data})
+  // console.log({data})
 
   const [totalSalesLine, totalUnitsLine] = useMemo(() => {
     if (!data) return [];

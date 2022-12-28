@@ -7,7 +7,7 @@ import { useGetCustomersQuery } from './theme/api'
 export default function Customers() {
   const theme = useTheme()
   const { data, isLoading } = useGetCustomersQuery()
-  console.log("data", data)
+  // console.log("data", data)
 
   const columns = [
     {
